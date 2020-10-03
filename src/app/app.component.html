@@ -1,21 +1,45 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="wrapper p-rel h-100vh">
+  <div class="logo p-fix" (click)="mMenuToggle = false">
+    <a href="#" routerLink="/home"><img src="./../assets/img/logo_small.svg" alt="Mano Ranjith"></a>
+  </div>
+  <div class="menu-bar p-fix h-100vh" [ngClass]="{'active' : mMenuToggle }">
+    <div class="green-band p-rel">
+      <div class="menu-links p-rel">
+        <ul>
+          <li><a href="#" routerLink="/about" routerLinkActive="active" class="d-block" (click)="mMenuToggle = !mMenuToggle">About me</a></li>
+          <li><a href="#" routerLink="/portfolio" routerLinkActive="active" class="d-block" (click)="mMenuToggle = !mMenuToggle">Portfolio</a></li>
+          <li><a href="#" routerLink="/skills" routerLinkActive="active" class="d-block" (click)="mMenuToggle = !mMenuToggle">Skills</a></li>
+          <li><a href="#" routerLink="/contact" routerLinkActive="active" class="d-block" (click)="mMenuToggle = !mMenuToggle">Contact me</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn d-flex p-rel flex-wrap p-abs cursor-pointer" (click)="mMenuToggle = !mMenuToggle">
+        <span class="d-inline-block p-abs"></span>
+        <span class="d-inline-block p-abs"></span>
+        <span class="d-inline-block p-abs"></span>
+        <span class="d-inline-block p-abs"></span>
+      </div>
+    </div>
+    <div class="bottom-band p-rel">
+      <a class="download cursor-pointer p-abs" target="_blank" href="./../assets/img/mano_resume.pdf"><i>Download Resume</i><img src="./../assets/img/download.svg" alt="Download Resume"></a>
+    </div>
+  </div>
+  <!-- <div class="social-media-links p-fix">
+    <ul>
+      <li class="mb-20"><a href="#"><img src="./../assets/img/fb.svg" alt="Like me on Facebook"></a></li>
+      <li class="mb-20"><a href="#"><img src="./../assets/img/twitter.svg" alt="Follow me on Twitter"></a></li>
+      <li><a href="#"><img src="./../assets/img/insta.svg" alt="Follow me on Instagram"></a></li>
+    </ul>
+  </div> -->
+  <div class="right-float-text p-fix">
+    <span routerLink="/home" routerLinkActive="active" class="d-block p-abs whitespace-nowrap">UJ MANO</span>
+    <span routerLink="/about" routerLinkActive="active"  class="d-block p-abs whitespace-nowrap">ABOUT ME</span>
+    <span routerLink="/portfolio" routerLinkActive="active"  class="d-block p-abs whitespace-nowrap">PORTFOLIO</span>
+    <span routerLink="/skills" routerLinkActive="active"  class="d-block p-abs whitespace-nowrap">SKILLS</span>
+    <span routerLink="/contact" routerLinkActive="active"  class="d-block p-abs whitespace-nowrap">CONTACT</span>
+  </div>
+  <!-- <span class="scroll p-fix"><img src="./../assets/img/scroll.svg" alt="Scroll"></span> -->
+  <div class="pages h-100vh">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="loading-overlay w-100 h-100vh" *ngIf="mLoading"></div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>

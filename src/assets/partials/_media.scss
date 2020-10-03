@@ -1,0 +1,14 @@
+@media (min-width: 1500px) {
+    .portfolio-wrap {
+        height: 70vh;
+    }
+}
+
+@media (min-width: 992px) and (max-height: 930px) {
+    .right-float-text {
+        span {
+            font-size: 88px;
+            letter-spacing: 0.3em;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+// Display
+.d-flex {
+    display: -webkit-flex;
+    display: flex;
+}
+.d-block {
+    display: block;
+}
+.d-inline-block {
+    display: inline-block;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.align-items-center {
+    align-items: center;
+}
+.justify-content-center {
+    justify-content: center;
+}
+
+
+// Width
+
+.w-50 {
+    width: 50%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+.h-100vh {
+    height: 100vh;
+}
+
+// Position
+.p-rel {
+    position: relative;
+}
+.p-abs {
+    position: absolute;
+}
+.p-fix {
+    position: fixed;
+}
+
+// Margin
+
+// Margin Top
+.mt-10 {
+    margin-top: 10px;
+}
+
+// Margin Bottom
+.mb-5 {
+    margin-bottom: 5px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+// Margin Left
+.ml-10 {
+    margin-left: 10px;
+}
+
+// Margin Right
+.mr-10 {
+    margin-right: 10px;
+}
+
+.mr-20 {
+    margin-right: 20px;
+}
+
+// Appearance
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.whitespace-nowrap {
+    white-space: nowrap;
+}
+
+// Alignment
+.text-center {
+    text-align: center;
+}
+
+.primary-clr {
+    color: $primary-color;
+}

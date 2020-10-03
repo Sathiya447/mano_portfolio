@@ -1,0 +1,126 @@
+<section class="portfolio h-100vh d-flex align-items-center justify-content-center">
+    <div class="w-70 portfolio-container">
+        <ul class="portfolio-list d-flex align-items-center">
+            <li *ngFor="let item of mPortfolioList; let portfolioIndex = index;" (click)="onPortfolioMenuClick(item)"
+                [ngClass]="{'active' : item.active, 'mr-10' : portfolioIndex < mPortfolioList.length - 1}">{{item.name}}
+            </li>
+        </ul>
+        <div class="portfolio-wrap">
+            <div class="portfolio-section d-flex" id="gdSection" *ngIf="mPortfolioList[0].active">
+                <div class="w-50 portfolio-card mr-20"><img src="../../assets/img/de_main.jpg" alt=""
+                        (click)="showPopUp(mPopUpList[2])"></div>
+                <div class="w-50 portfolio-card"><img src="../../assets/img/jwel_main.jpg" alt=""
+                        (click)="showPopUp(mPopUpList[3])"></div>
+                <div class="w-50 portfolio-card mr-20"><img src="../../assets/img/graphics_main.jpg" alt=""
+                        (click)="showPopUp(mPopUpList[0])"></div>
+                <div class="w-50 portfolio-card"><img src="../../assets/img/manipulation_main.jpg" alt=""
+                        (click)="showPopUp(mPopUpList[1])"></div>
+            </div>
+            <div class="portfolio-section ui d-flex" *ngIf="mPortfolioList[1].active">
+                <div class="w-50 portfolio-card mr-20">
+                    <img src="../../assets/img/ui_1_1.jpg" class="mb-20" alt="">
+                    <img src="../../assets/img/ui_1.jpg" alt="">
+                </div>
+                <div class="w-50 portfolio-card mr-20">
+                    <img src="../../assets/img/ui_2.jpg" class="mb-20" alt="">
+                    <img src="../../assets/img/ui_2_1.jpg" alt="">
+                </div>
+                <div class="w-50 portfolio-card mr-20">
+                    <img src="../../assets/img/ui_3.jpg" class="mb-20" alt="">
+                    <img src="../../assets/img/ui_3_1.jpg" alt="">
+                </div>
+                <div class="w-50 portfolio-card">
+                    <img src="../../assets/img/ui_4.jpg" class="mb-20" alt="">
+                    <img src="../../assets/img/ui_4_1.jpg" alt="">
+                </div>
+            </div>
+            <div class="portfolio-section d-flex webdesign" id="wdSection" *ngIf="mPortfolioList[2].active">
+                <div class="w-50 portfolio-card mr-20"><img src="../../assets/img/web_2_main.jpg" alt=""
+                        (click)="showPopUp(mPopUpList[4])"></div>
+                <div class="w-50 portfolio-card">
+                    <div class="mb-20">
+                        <img src="../../assets/img/fb_4.jpg" alt="" (click)="showPopUp(mPopUpList[5])">
+                    </div>
+                    <div class="d-flex">
+                        <div class="mr-20"><img src="../../assets/img/fb_3.jpg" alt=""
+                                (click)="showPopUp(mPopUpList[6])"></div>
+                        <div><img src="../../assets/img/fb_5.jpg" alt="" (click)="showPopUp(mPopUpList[7])"></div>
+                    </div>
+                </div>
+                <div class="w-50 portfolio-card mr-20"><img src="../../assets/img/web_main.jpg" alt=""
+                        (click)="showPopUp(mPopUpList[8])"></div>
+                <div class="w-50 portfolio-card">
+                    <div class="mb-20">
+                        <img src="../../assets/img/fb_1.jpg" alt="" (click)="showPopUp(mPopUpList[9])">
+                    </div>
+                    <div class="d-flex">
+                        <div class="mr-20"><img src="../../assets/img/house.jpg" alt=""
+                                (click)="showPopUp(mPopUpList[10])"></div>
+                        <div><img src="../../assets/img/fb_2.jpg" alt="" (click)="showPopUp(mPopUpList[11])"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-section d-flex motiongraphics" *ngIf="mPortfolioList[3].active">
+                <div class="w-50 portfolio-card mr-20 video-icon" (click)="showPopUp(mPopUpList[22])"><img src="../../assets/img/video_1.jpg" alt=""></div>
+                <div class="w-50 portfolio-card">
+                    <div class="mb-20 d-flex">
+                        <div class="mr-20 video-icon" (click)="showPopUp(mPopUpList[23])"><img src="../../assets/img/video_2.jpg" alt=""></div>
+                        <div class="video-icon" (click)="showPopUp(mPopUpList[24])"><img src="../../assets/img/video_3.jpg" alt=""></div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="mr-20 video-icon" (click)="showPopUp(mPopUpList[25])"><img src="../../assets/img/video_4.jpg" alt=""></div>
+                        <div class="video-icon" (click)="showPopUp(mPopUpList[26])"><img src="../../assets/img/video_5.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-section d-flex branding" id="brandingSection" *ngIf="mPortfolioList[4].active">
+                <div class="w-50 portfolio-card mr-20">
+                    <div class="mb-20 d-flex">
+                        <div class="mr-20 w-50"><img src="../../assets/img/logo_5.jpg" alt=""
+                                (click)="showPopUp(mPopUpList[12])"></div>
+                        <div class="w-50"><img src="../../assets/img/logo_7.jpg" alt="" (click)="showPopUp(mPopUpList[13])"></div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="mr-20 w-50"><img src="../../assets/img/logo_6.jpg" alt=""
+                                (click)="showPopUp(mPopUpList[14])"></div>
+                        <div class="w-50"><img src="../../assets/img/logo_8.jpg" alt="" (click)="showPopUp(mPopUpList[15])"></div>
+                    </div>
+                </div>
+                <div class="w-50 portfolio-card"><img src="../../assets/img/logo_9.jpg" alt=""
+                        (click)="showPopUp(mPopUpList[16])"></div>
+                <div class="w-50 portfolio-card mr-20">
+                    <div class="mb-20 d-flex">
+                        <div class="mr-20 w-50"><img src="../../assets/img/logo_1.jpg" alt=""
+                                (click)="showPopUp(mPopUpList[17])"></div>
+                        <div class="w-50"><img src="../../assets/img/logo_2.jpg" alt="" (click)="showPopUp(mPopUpList[18])"></div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="mr-20 w-50"><img src="../../assets/img/logo_3.jpg" alt=""
+                                (click)="showPopUp(mPopUpList[19])"></div>
+                        <div class="w-50"><img src="../../assets/img/logo_4.jpg" alt="" (click)="showPopUp(mPopUpList[20])"></div>
+                    </div>
+                </div>
+                <div class="w-50 portfolio-card"><img src="../../assets/img/logo_10.jpg" alt=""
+                        (click)="showPopUp(mPopUpList[21])"></div>
+            </div>
+            <div class="slider-controls"
+                *ngIf="mPortfolioList[0].active || mPortfolioList[2].active || mPortfolioList[4].active">
+                <button class="prev" (click)="sliderPrevClick()"></button>
+                <button class="next" (click)="sliderNextClick()"></button>
+            </div>
+        </div>
+    </div>
+    <div class="popup-overlay" [ngClass]="{'show' : mShowPopUp}" (click)="closePopUp()"></div>
+    <div class="popup-wrap" [ngClass]="{'show' : mShowPopUp}">
+        <span class="close-icon cursor-pointer"><img src="../../assets/img/close_icon.svg" alt=""
+                (click)="closePopUp()"></span>
+        <div class="popup">
+            <div *ngFor="let pop of mPopUpList; let popupIndex = index;">
+                <div *ngIf="pop.active && !pop.isVideo">
+                    <img [src]="pop.src" alt="">
+                </div>
+                <video *ngIf="pop.active && pop.isVideo" [src]="pop.src" muted autoplay></video>
+            </div>
+        </div>
+    </div>
+</section>
